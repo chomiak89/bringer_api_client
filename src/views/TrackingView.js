@@ -6,12 +6,15 @@ import moment from "moment";
 import "../styles/tracking.css";
 
 export default function TrackingView() {
+  //setup state for holding tracking number
   const [trackingNum, setTrackingNum] = useState({
     tracking_num: "",
   });
 
+  //setup state to hold data from 3rd party API
   const [trackingData, setTrackingData] = useState("");
 
+  // setup handler for updating the state
   const updateState = (event) => {
     setTrackingNum({
       ...trackingNum,
@@ -19,13 +22,14 @@ export default function TrackingView() {
     });
   };
 
+  //setup handler for submitting the form
   const handleSubmit = (event) => {
     event.preventDefault();
 
     axios
 
       .get(
-        `http://localhost:3001/tracking_parcel?tracking=${trackingNum.tracking_num}`
+        `${process.env.REACT_APP_BACKEND_URL}/tracking_parcel?tracking=${trackingNum.tracking_num}`
       )
       .then((res) => {
         console.log(res.data);
@@ -46,6 +50,7 @@ export default function TrackingView() {
               value={trackingNum.tracking_num}
               type="text"
               onChange={updateState}
+              required
             ></input>
             <button>Track</button>
           </form>

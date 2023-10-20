@@ -27,7 +27,7 @@ export default function LoginView() {
 
     axios
       //   .post(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, state)
-      .post(`http://localhost:3001/generate_token`, loginState)
+      .post(`${process.env.REACT_APP_BACKEND_URL}/generate_token`, loginState)
       .then((res) => {
         console.log(res.data);
         setJwtState(res.data);
@@ -48,6 +48,7 @@ export default function LoginView() {
                 value={loginState.username}
                 type="text"
                 onChange={updateState}
+                required
               ></input>
             </div>
             <div className="input_container">

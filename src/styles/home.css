@@ -1,0 +1,9 @@
+.home_main_container {
+  text-align: left;
+  width: 50vw;
+  margin: 150px auto 0 auto;
+}
+
+.home_main_container span {
+  color: rgb(10, 187, 10);
+}
