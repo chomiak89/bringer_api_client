@@ -27,7 +27,10 @@ export default function LoginView() {
 
     axios
       //   .post(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, state)
-      .post(`${process.env.REACT_APP_BACKEND_URL}/generate_token`, loginState)
+      .post(
+        `https://drab-cyan-camel-vest.cyclic.app/generate_token`,
+        loginState
+      )
       .then((res) => {
         console.log(res.data);
         setJwtState(res.data);

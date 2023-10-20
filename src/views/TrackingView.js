@@ -29,7 +29,7 @@ export default function TrackingView() {
     axios
 
       .get(
-        `${process.env.REACT_APP_BACKEND_URL}/tracking_parcel?tracking=${trackingNum.tracking_num}`
+        `https://drab-cyan-camel-vest.cyclic.app/tracking_parcel?tracking=${trackingNum.tracking_num}`
       )
       .then((res) => {
         console.log(res.data);
