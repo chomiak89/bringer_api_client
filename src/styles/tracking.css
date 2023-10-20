@@ -1,0 +1,58 @@
+.tracking_form {
+  margin-top: 70px;
+}
+.tracking_form label {
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+.tracking_form input {
+  padding: 11.5px;
+  border: 1px solid black;
+}
+.tracking_form button {
+  width: 100px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  background-color: #45b3f3;
+  color: #fff;
+  border: none;
+  position: relative;
+  top: 2px;
+}
+.tracking_form button:hover {
+  background-color: #2e80af;
+  transition: 0.2s;
+}
+
+.tracking_data_main_container {
+  width: 80vw;
+  margin: 80px auto 0 auto;
+}
+
+.tracking_data_timestamp_container {
+  width: 200px;
+  text-align: right;
+  margin-right: 60px;
+}
+.tracking_data_location_container {
+  width: 300px;
+  text-align: left;
+  position: relative;
+}
+.tracking_data_location_container:after {
+  border-left: 3px solid rgb(205, 204, 204);
+  content: "";
+  display: block;
+  height: 70%;
+  position: absolute;
+  top: 16px;
+  left: -28px;
+}
+
+.tracking_data_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+}
